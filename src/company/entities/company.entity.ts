@@ -23,5 +23,7 @@ export class Company {
   website?: string;
   @Field()
   industry: string;
+  @Field({nullable: true})
+  createAt?: Date
   
 }

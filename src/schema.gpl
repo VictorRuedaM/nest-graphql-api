@@ -13,8 +13,30 @@ type Company {
   zip_code: Int
   website: String
   industry: String!
+  createAt: DateTime
 }
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
 
 type Query {
   companies: [Company!]!
+}
+
+type Mutation {
+  createCompany(createCompayInput: CreateCompanyDto!): Company!
+}
+
+input CreateCompanyDto {
+  company_name: String!
+  address: String!
+  phone_number: String!
+  emial: String!
+  state: String!
+  city: String!
+  zip_code: Int
+  website: String
+  industry: String!
 }
