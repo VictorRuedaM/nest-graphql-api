@@ -6,14 +6,16 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gpl')
     }),
-    MongooseModule.forRoot('mongodb://localhost:27017/companies-listo'),
+    MongooseModule.forRoot(`${process.env.DB_URL}`),
     CompanyModule,
   ],
   controllers: [AppController],

@@ -22,14 +22,17 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 scalar DateTime
 
 type Query {
-  companies: [Company!]!
+  getCompanies: [Company!]!
+  getOneCompany(_id: String!): Company!
 }
 
 type Mutation {
-  createCompany(createCompayInput: CreateCompanyDto!): Company!
+  createCompany(createCompayInput: CreateCompanyInput!): Company!
+  updateCompany(updateCompayInput: UpdateCompanyInput!): Company!
+  deleteCompany(_id: String!): Company!
 }
 
-input CreateCompanyDto {
+input CreateCompanyInput {
   company_name: String!
   address: String!
   phone_number: String!
@@ -39,4 +42,17 @@ input CreateCompanyDto {
   zip_code: Int
   website: String
   industry: String!
+}
+
+input UpdateCompanyInput {
+  company_name: String
+  address: String
+  phone_number: String
+  emial: String
+  state: String
+  city: String
+  zip_code: Int
+  website: String
+  industry: String
+  _id: ID!
 }
