@@ -1,0 +1,20 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Company {
+  _id: String
+  company_name: String!
+  address: String!
+  phone_number: String!
+  emial: String!
+  state: String!
+  city: String!
+  zip_code: Int
+  website: String
+  industry: String!
+}
+
+type Query {
+  companies: [Company!]!
+}
