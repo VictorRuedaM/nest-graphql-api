@@ -63,5 +63,102 @@ $ npm run start:prod
 $ http://localhost:3000/graphql
 ```
 
+## Query and Mutation
 
-
+### getCompanies
+```bash
+{
+  getCompanies {
+  	_id
+    company_name
+    address
+    phone_number
+    emial
+    state 
+    city
+    zip_code
+    website
+    industry
+    createAt
+    
+  }
+}
+```
+### getOneCompany
+```bash
+{
+  getOneCompany(_id: "65e258c18e4b7515a448b6cd"){
+    _id
+    company_name
+    address
+    phone_number
+    emial
+    state 
+    city
+    zip_code
+    website
+    industry
+    createAt
+  }
+}
+```
+### createCompany
+```bash
+mutation {
+  createCompany(createCompayInput: {
+    company_name: "Sura Bank",
+    address: "Cra 126 # 45-12",
+    phone_number: "96321478",
+    emial: "contacto@sura.com",
+    state: "Cundinamarca",
+    city: "Bogotá",
+    zip_code: 10021256,
+    website: "www.surabank.com",
+    industry: "Financiero"
+  }){
+    company_name
+    address
+    phone_number
+    emial
+    state 
+    city
+    zip_code
+    website
+    industry
+    createAt
+    
+  }
+}
+```
+### updateCompany
+```bash
+mutation {
+  
+  updateCompany( updateCompayInput: {
+    _id: "65e25a438e4b7515a448b6da"
+   
+   	company_name: "SoftServices"
+    
+  }){
+    _id
+    company_name
+    address
+    phone_number
+    emial
+    state 
+    city
+    zip_code
+    website
+    industry
+    createAt
+  }
+}
+```
+### deleteCompany
+```bash
+mutation {
+  deleteCompany(_id: "65e26190cae6c4785233a2f0"){
+    _id
+  }
+}
+```
