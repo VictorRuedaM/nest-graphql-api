@@ -1,5 +1,5 @@
 <p align="center">
-  <a target="blank"><img src="./img/nest-graphql.png" width="800" heigth="800" alt="Nest Logo" /></a>
+  <a target="blank"><img src="./img/nest-graphql.png" width="800" heigth="800" alt="Nest API with GraphQL" /></a>
 </p>
 
 
@@ -16,11 +16,11 @@
   - See all companies registered in the database
   - View a company by its ID.
 
-It has Mongo ID validation to prevent an incorrect ID from being entered.
+🔸It has Mongo ID validation to prevent an incorrect ID from being entered.
 
-Validation in the type of fields.
+🔸Validation in the type of fields.
 
-There are required fields and non-required fields, the following list shows the fields it supports:	
+🔸There are required fields and non-required fields, the following list shows the fields it supports:	
   - company_name: string; (required, cannot be empty)
   - address: string; (required, cannot be empty)
   - phone_number: string; (required, cannot be empty)
