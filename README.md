@@ -36,9 +36,9 @@
  
 
 ## 🔸Settings
-  1. Clone the repository.
-  2. Rename the ```.env.example``` to ```.env```.
-  3. Configure environment variables.
+  1. Clone the repository
+  2. Rename the ```.env.example``` to ```.env```
+  3. Configure environment variables
 
 ## 🔸Installation
 
