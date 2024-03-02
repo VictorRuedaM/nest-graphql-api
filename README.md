@@ -63,7 +63,7 @@ $ npm run start:prod
 $ http://localhost:3000/graphql
 ```
 
-## Query and Mutation
+## Query and Mutation Examples
 
 ### getCompanies
 ```bash
