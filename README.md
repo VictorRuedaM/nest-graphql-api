@@ -10,7 +10,7 @@
   - TypeScript
   - GraphQL
 
-## This API allows:
+## 🔸This API allows:
   - Create a company in database
   - Update a company by ID
   - See all companies registered in the database
@@ -33,18 +33,18 @@
 
  
 
-## Settings
+## 🔸Settings
   1. Clone the repository.
   2. Rename the ```.env.example``` to ```.env```.
   3. Configure environment variables.
 
-## Installation
+## 🔸Installation
 
 ```bash
 $ npm install
 ```
 
-## Execute
+## 🔸Execute
 
 ```bash
 # development
@@ -57,13 +57,13 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Go to the URL
+## 🔸Go to the URL
 
 ```bash
 $ http://localhost:3000/graphql
 ```
 
-## Query and Mutation Examples
+## 🔸Query and Mutation Examples
 
 ### getCompanies
 ```bash
