@@ -1,30 +1,42 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a target="blank"><img src="./img/nest-graphql.png" width="800" heigth="800" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Development of an API for ListoApp technical skills testing using the following technologies:
+  - Nest.JS
+  - MongoDB
+  - TypeScript
+  - GraphQL
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## This API allows:
+  - Create a company in database
+  - Update a company by ID
+  - See all companies registered in the database
+  - View a company by its ID.
+
+It has Mongo ID validation to prevent an incorrect ID from being entered.
+
+Validation in the type of fields.
+
+There are required fields and non-required fields, the following list shows the fields it supports:	
+  - company_name: string; (required, cannot be empty)
+  - address: string; (required, cannot be empty)
+  - phone_number: string; (required, cannot be empty)
+  - emial: string; (it is required, it cannot be empty, it must be a valid email)
+  - state: string; (required, cannot be empty)
+  - city: string; (required, cannot be empty)
+  - zip_code: number; (optional, can be empty)
+  - website: string; (optional, can be empty)
+  - industry: string; (required, cannot be empty)
+
+ 
+
+## Settings
+  1. Clone the repository.
+  2. Rename the ```.env.example``` to ```.env```.
+  3. Configure environment variables.
 
 ## Installation
 
@@ -32,7 +44,7 @@
 $ npm install
 ```
 
-## Running the app
+## Execute
 
 ```bash
 # development
@@ -45,29 +57,11 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Go to the URL
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+$ http://localhost:3000/graphql
 ```
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).

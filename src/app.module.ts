@@ -7,6 +7,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
+import { CommoModule } from './commo/commo.module';
 
 @Module({
   imports: [
@@ -15,8 +16,9 @@ import { ConfigModule } from '@nestjs/config';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gpl')
     }),
-    MongooseModule.forRoot(`${process.env.DB_URL}`),
+    MongooseModule.forRoot(`${process.env.DB_URI}`),
     CompanyModule,
+    CommoModule,
   ],
   controllers: [AppController],
   providers: [AppService],

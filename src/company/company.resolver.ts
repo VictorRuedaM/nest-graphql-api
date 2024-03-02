@@ -3,7 +3,8 @@ import { CompanyService } from './company.service';
 import { Company } from './entities/company.entity';
 import { CreateCompanyInput } from './dto/createCompany.dto';
 import { UpdateCompanyInput } from './dto/updateCompany.dto';
-import { ParseIntPipe } from '@nestjs/common';
+import { ParseMongoIdPipe } from 'src/commo/pipes/parse-mongo-id/parse-mongo-id.pipe';
+
 
 @Resolver()
 export class CompanyResolver {
@@ -16,7 +17,7 @@ export class CompanyResolver {
    }
 
    @Query(() => Company)
-   getOneCompany(@Args('_id') _id: string){
+   getOneCompany(@Args('_id', ParseMongoIdPipe) _id: string){
     return this.companyService.findOne(_id);
    }
 
@@ -31,7 +32,7 @@ export class CompanyResolver {
    }
 
    @Mutation(() => Company)
-   deleteCompany(@Args('_id') _id: string): Promise<Company>{
+   deleteCompany(@Args('_id', ParseMongoIdPipe) _id: string): Promise<Company>{
       return this.companyService.delete(_id);
    }
    
