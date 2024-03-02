@@ -4,7 +4,9 @@
 
 
 
-## Development of an API for ListoApp technical skills testing using the following technologies:
+# Development of an API for ListoApp technical skills testing 
+
+## 🔸Technologies used
   - Nest.JS
   - MongoDB
   - TypeScript
@@ -106,16 +108,17 @@ $ http://localhost:3000/graphql
 ```bash
 mutation {
   createCompany(createCompayInput: {
-    company_name: "Sura Bank",
-    address: "Cra 126 # 45-12",
+    company_name: "Surak Bank",
+    address: "125rd Park Avenue",
     phone_number: "96321478",
-    emial: "contacto@sura.com",
-    state: "Cundinamarca",
-    city: "Bogotá",
+    emial: "contact@surak.com",
+    state: "Florida",
+    city: "Miami",
     zip_code: 10021256,
     website: "www.surabank.com",
-    industry: "Financiero"
+    industry: "Financial"
   }){
+    _id
     company_name
     address
     phone_number
