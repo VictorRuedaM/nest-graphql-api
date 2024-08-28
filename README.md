@@ -4,7 +4,7 @@
 
 
 
-# Development of an API with NestJS and GraphQL 
+# Developing an API with NestJS and GraphQL
 
 ## 🔸Technologies used
   - Nest.JS
