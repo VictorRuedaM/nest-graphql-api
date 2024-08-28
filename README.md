@@ -4,7 +4,7 @@
 
 
 
-# Development of an API for ListoApp technical skills testing 
+# Development of an API with NestJS and GraphQL 
 
 ## 🔸Technologies used
   - Nest.JS
